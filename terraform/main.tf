@@ -1,5 +1,5 @@
 module "staging" {
-  source             = "github.com/voting-app-example/infra?ref=v0.0.1"
+  source             = "git::https://github.com/voting-app-example/infra//terraform?ref=v0.0.1"
   kubeconfig_name    = "kubeconfig_staging"
   loadbalancer_name  = "loadbalancer-staging"
   cluster_name       = "staging"
@@ -8,7 +8,7 @@ module "staging" {
 }
 
 module "prod" {
-  source             = "github.com/voting-app-example/infra?ref=v0.0.1"
+  source             = "git::https://github.com/voting-app-example/infra//terraform?ref=v0.0.1"
   kubeconfig_name    = "kubeconfig_production"
   loadbalancer_name  = "loadbalancer-prod"
   cluster_name       = "prod"
