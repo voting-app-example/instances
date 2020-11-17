@@ -5,5 +5,5 @@ output "staging_ip" {
 
 output "production_ip" {
   description = "Production ip."
-  value       = module.prod.public_ip
+  value       = module.production.public_ip
 }
