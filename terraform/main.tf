@@ -4,6 +4,7 @@ module "staging" {
   loadbalancer_name  = "loadbalancer-staging"
   cluster_name       = "staging"
   cluster_nodes_name = "staging-node"
+  registry_name      = "voting-app-example"
   digitalocean_token = var.digitalocean_token
 }
 
@@ -13,6 +14,7 @@ module "production" {
   loadbalancer_name  = "loadbalancer-production"
   cluster_name       = "production"
   cluster_nodes_name = "production-node"
+  registry_name      = "voting-app-example"
   digitalocean_token = var.digitalocean_token
 }
 
