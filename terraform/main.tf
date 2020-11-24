@@ -42,8 +42,8 @@ resource "github_actions_secret" "staging_kubernetes_config_worker" {
   plaintext_value = module.staging.kubeconfig
 }
 
-resource "github_actions_secret" "staging_public_ip" {
-  repository      = "instances"
+resource "github_actions_secret" "staging_public_ip_vote" {
+  repository      = "vote"
   secret_name     = "STAGING_PUBLIC_IP"
   plaintext_value = module.staging.public_ip
 }
@@ -73,8 +73,8 @@ resource "github_actions_secret" "production_kubernetes_config_worker" {
   plaintext_value = module.production.kubeconfig
 }
 
-resource "github_actions_secret" "production_public_ip" {
-  repository      = "instances"
+resource "github_actions_secret" "production_public_ip_vote" {
+  repository      = "vote"
   secret_name     = "PRODUCTION_PUBLIC_IP"
   plaintext_value = module.production.public_ip
 }
